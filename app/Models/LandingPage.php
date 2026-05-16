@@ -26,5 +26,8 @@ class LandingPage extends Model
         });
     }
 
-    //
+    public function forms()
+    {
+        return $this->hasMany(CustomForm::class, 'landing_page_id');
+    }
 }
